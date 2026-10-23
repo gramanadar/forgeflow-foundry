@@ -1,6 +1,16 @@
-# ForgeFlow Foundry — Autonomous Development Factory
+# MayanForge Foundry — Autonomous Development Factory
 
-**Purpose:** Build ForgeFlow Platform using external cloud coding agents. This is NOT ForgeFlow's customer software-delivery runtime.
+**Purpose:** Build MayanForge Platform using external cloud coding agents. This is NOT MayanForge's customer software-delivery runtime.
+
+## Naming
+| Component | Name |
+|---|---|
+| Company / product | MayanForge |
+| Customer-facing platform | MayanForge Platform |
+| Autonomous development infrastructure (this repo) | MayanForge Foundry |
+| Internal GitHub repository | `mayanforge-foundry` |
+| Platform GitHub repository | `mayanforge-platform` |
+| Engineering agents | MayanForge Agents |
 
 ## What this package is
 A versioned implementation specification plus a minimal, safe-by-default GitHub Actions dispatcher and Cursor Cloud Agents v1 API adapter. **Not a deployed service.** Live Cursor/GitHub integration requires your accounts and an end-to-end smoke test.
@@ -34,4 +44,4 @@ The dispatcher submits **one** approved issue per run, marks it in progress and 
 
 ## Original project references
 
-The `reference/` directory contains the original AI software delivery platform blueprint (`ai_software_delivery_platform_blueprint.html`) and the ForgeFlow website prototype (`forgeflow_site_index.html`). These are reference artifacts for building ForgeFlow Foundry and ultimately ForgeFlow Platform; they are not themselves implemented application services.
+The `reference/` directory contains the original AI software delivery platform blueprint (`ai_software_delivery_platform_blueprint.html`) and the MayanForge website prototype (`mayanforge_site_index.html`). These are reference artifacts for building MayanForge Foundry and ultimately MayanForge Platform; they are not themselves implemented application services.
