@@ -1,0 +1,31 @@
+name: System A Dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Inspect selection without launching Cursor'
+        type: boolean
+        default: true
+# Add a schedule ONLY after live smoke test and safety review.
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: system-a-dispatch
+  cancel-in-progress: false
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+      SYSTEM_A_ENABLED: ${{ vars.SYSTEM_A_ENABLED }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      DRY_RUN: ${{ inputs.dry_run }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Dispatch one task
+        run: python -m system_a.dispatcher
