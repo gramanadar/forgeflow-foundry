@@ -1,4 +1,4 @@
-name: ForgeFlow Foundry CI
+name: MayanForge Foundry CI
 on:
   pull_request:
   push:

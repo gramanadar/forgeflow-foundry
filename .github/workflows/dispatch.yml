@@ -1,4 +1,4 @@
-name: ForgeFlow Foundry Dispatch
+name: MayanForge Foundry Dispatch
 on:
   workflow_dispatch:
     inputs:

@@ -1,4 +1,4 @@
-# ForgeFlow Foundry Requirements & Acceptance
+# MayanForge Foundry Requirements & Acceptance
 
 | ID | Requirement | Acceptance |
 |---|---|---|

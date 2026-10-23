@@ -1,7 +1,7 @@
-# Architecture Decision Record A-001 — ForgeFlow Foundry
+# Architecture Decision Record A-001 — MayanForge Foundry
 
 ## Mission and boundaries
-ForgeFlow Foundry builds **ForgeFlow itself**. ForgeFlow Platform is the eventual product that builds customer software. Keep credentials, data, orchestration, lifecycle and deployments isolated. ForgeFlow Foundry must survive ForgeFlow Platform outages.
+MayanForge Foundry builds **MayanForge itself**. MayanForge Platform is the eventual product that builds customer software. Keep credentials, data, orchestration, lifecycle and deployments isolated. MayanForge Foundry must survive MayanForge Platform outages.
 
 ## Components
 - **Planning:** human-approved roadmap/specifications stored as GitHub issues and repository documents.

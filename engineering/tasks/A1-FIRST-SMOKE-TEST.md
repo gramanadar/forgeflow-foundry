@@ -3,7 +3,7 @@
 **Goal:** prove cloud execution while laptop is offline.
 
 ## Task
-Create `docs/cloud-agent-smoke-test.md` documenting the repo's unit-test command and a short explanation of ForgeFlow Foundry vs ForgeFlow Platform. Add a unit test verifying a known existing helper function. Do not change workflow or security configuration.
+Create `docs/cloud-agent-smoke-test.md` documenting the repo's unit-test command and a short explanation of MayanForge Foundry vs MayanForge Platform. Add a unit test verifying a known existing helper function. Do not change workflow or security configuration.
 
 ## Acceptance criteria
 - New doc is accurate and linked from README.

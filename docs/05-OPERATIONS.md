@@ -21,12 +21,12 @@ Inspect agent URL, branch and tests. Open a PR manually if safe, or create a fol
 ## Controlled end-to-end smoke test
 Run this only after an operator with repository admin and Cursor access approves the spend. This repository cannot complete the live steps. Do not paste API keys, tokens, or `CURSOR_API_KEY` into issues, pull requests, or chat.
 
-1. Confirm the repository is private, `main` rejects direct pushes and force pushes, required CI is `ForgeFlow Foundry CI`, and auto-merge is off.
+1. Confirm the repository is private, `main` rejects direct pushes and force pushes, the required status check is the `test` job from `MayanForge Foundry CI`, and auto-merge is off.
 2. Confirm Cursor is connected to this repository and a cloud environment build has completed. Set an account spend limit before any live create.
 3. Create labels `agent-approved`, `agent-running`, `agent-blocked`, and `agent-done`.
 4. Store the Cursor key only as the Actions secret `CURSOR_API_KEY`. Set the repository variable `FOUNDRY_ENABLED` to `false`.
 5. Open one trivial issue from `.github/ISSUE_TEMPLATE/agent-task.yml`. Include the heading text `Acceptance criteria`. Leave it unlabeled.
-6. Run **ForgeFlow Foundry Dispatch** manually with `dry_run` checked (the default). The log should say there is no eligible issue. Confirm no Cursor agent was created.
+6. Run **MayanForge Foundry Dispatch** manually with `dry_run` checked (the default). The log should say there is no eligible issue. Confirm no Cursor agent was created.
 7. Add `agent-approved` to the trivial issue. Run the workflow again with `dry_run` checked. The log should select that issue and must not change labels.
 8. Set `FOUNDRY_ENABLED` to `true`. Run again with `dry_run` checked. Selection may repeat. Labels and Cursor must stay unchanged.
 9. Run once with `dry_run` unchecked. Expect `agent-running`, an issue comment with the agent id, run id, and `https://cursor.com/agents/...` URL, a new branch, a pull request, and green CI. Merge only by a human review.
