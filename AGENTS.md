@@ -13,7 +13,7 @@ You are implementing **Foundry**, the development infrastructure that builds For
 1. Read `docs/01-ARCHITECTURE.md`, `docs/02-REQUIREMENTS.md`, relevant ADRs and issue acceptance criteria.
 2. Write a concise implementation plan and identify changed files.
 3. Implement smallest coherent change; add tests for success and failure paths.
-4. Run `python -m unittest discover -s tests -v` and `python -m compileall -q system_a`; run any additional relevant checks.
+4. Run `python -m unittest discover -s tests -v` and `python -m compileall -q foundry`; run any additional relevant checks.
 5. Create a PR (or ensure `autoCreatePR` does) with: issue link, summary, test commands/results, risks, manual steps, and evidence.
 6. If blocked, explain the blocker; do not fabricate success.
 
