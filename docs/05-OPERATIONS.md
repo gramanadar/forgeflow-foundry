@@ -16,7 +16,7 @@ Stop automatic retries; inspect provider dashboard and recorded deterministic ag
 Inspect agent URL, branch and tests. Open a PR manually if safe, or create a follow-up task. Do not mark completed without evidence.
 
 ## Incident shutdown
-Set `SYSTEM_A_ENABLED=false`, disable scheduled workflow, revoke key if compromised, audit changes and notify owner.
+Set `FOUNDRY_ENABLED=false`, disable scheduled workflow, revoke key if compromised, audit changes and notify owner.
 
 ## Metrics to capture later
 Issue-to-PR lead time, successful PR ratio, human rework hours, CI first-pass rate, cost per accepted issue, incidents and timeouts.

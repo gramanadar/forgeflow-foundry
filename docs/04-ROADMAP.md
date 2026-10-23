@@ -18,5 +18,5 @@ Atomic lease DB, cost telemetry, notifications, provider outage circuit breaker,
 ## A5 — Parallel backlog execution
 Dependency graph, risk-based scheduling, independent review agents, isolated branches, max parallelism and budgets.
 
-## System B kickoff
-Only after A1 end-to-end proof: start ForgeFlow Core v0.1 (requirements capture, architecture artifacts, review gates). System A and B remain separate.
+## ForgeFlow Platform kickoff
+Only after A1 end-to-end proof: start ForgeFlow Core v0.1 (requirements capture, architecture artifacts, review gates). ForgeFlow Foundry and ForgeFlow Platform remain separate.
