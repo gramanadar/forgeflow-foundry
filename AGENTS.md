@@ -1,4 +1,4 @@
-# ForgeFlow System A — Cursor Cloud Agent Instructions
+# ForgeFlow Foundry— Cursor Cloud Agent Instructions
 
 You are implementing **System A**, the development infrastructure that builds ForgeFlow. Do not confuse this with **System B**, ForgeFlow's future customer-facing software delivery platform.
 
