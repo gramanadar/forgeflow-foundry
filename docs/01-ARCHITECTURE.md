@@ -20,8 +20,8 @@ Autonomous architecture approvals, multi-agent scheduling, unlimited retries, cu
 
 ## Reliability decisions
 - One dispatch at a time using GitHub Actions concurrency and one issue selected.
-- Deterministic UUID-based Cursor `agentId` for idempotent create retries; no envVars with this mode.
-- A failed API launch is marked blocked for operator recovery; never silently retry with a different ID.
+- Deterministic UUID-based Cursor `agentId` (`bc-` plus lowercase UUID v5). Current public docs say a repeat POST of that id returns HTTP 409 `agent_id_conflict` and does not replay the original create body. The dispatcher must not mint a replacement id. A 409 leaves the issue `agent-running`. Do not send `envVars` with a client-supplied id.
+- A failed or ambiguous API launch is marked `agent-blocked` for operator recovery. A confirmed create that fails only while commenting on the issue stays `agent-running`.
 - GitHub labels/comments are not atomic transactional storage; a future lease store is needed for parallelism.
 - Keep API schema behind `foundry/cursor_api.py`; Cursor v1 is public beta.
 

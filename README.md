@@ -29,7 +29,7 @@ No third-party Python packages required for dispatcher.
 - `AGENTS.md`: repository-wide Cursor agent operating instructions.
 
 ## Current limits
-The dispatcher submits **one** approved issue per run, marks it in progress and records agent IDs in issue comments. It is not yet a production-grade scheduler, cost-meter, notification service, or robust recovery controller. Cursor API v1 is public beta; monitor for contract changes.
+The dispatcher submits **one** approved issue per run, marks it in progress, and records agent and run ids in an issue comment. A repeated create for the same issue reuses the same `bc-` UUID. Current public Cursor docs describe that repeat as HTTP 409 `agent_id_conflict`, so the issue stays `agent-running` for reconciliation. This is not yet a production-grade scheduler, cost meter, notification service, or recovery controller. Cursor API v1 is public beta. The live smoke test in `docs/05-OPERATIONS.md` is still required before any schedule.
 
 
 ## Original project references

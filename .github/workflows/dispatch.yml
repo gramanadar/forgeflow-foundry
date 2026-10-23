@@ -16,16 +16,22 @@ concurrency:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       GH_TOKEN: ${{ github.token }}
-      CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
       FOUNDRY_ENABLED: ${{ vars.FOUNDRY_ENABLED }}
       GITHUB_REPOSITORY: ${{ github.repository }}
-      DRY_RUN: ${{ inputs.dry_run }}
+      # github.event.inputs values are strings ("true" / "false"). The typed
+      # inputs.dry_run boolean has no documented env-string encoding.
+      DRY_RUN: ${{ github.event.inputs.dry_run }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Dispatch one task
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
         run: python -m foundry.dispatcher
