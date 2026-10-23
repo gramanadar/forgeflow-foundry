@@ -1,4 +1,4 @@
-# ForgeFlow System A — Autonomous Development Factory
+# ForgeFlow Foundry — Autonomous Development Factory
 
 **Purpose:** Build ForgeFlow (System B) using external cloud coding agents. This is NOT ForgeFlow's customer software-delivery runtime.
 
