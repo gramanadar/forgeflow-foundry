@@ -1,4 +1,4 @@
-name: System A CI
+name: ForgeFlow Foundry CI
 on:
   pull_request:
   push:
@@ -16,4 +16,4 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tests -v
       - name: Compile
-        run: python -m compileall -q system_a
+        run: python -m compileall -q foundry

@@ -1,4 +1,4 @@
-name: System A Dispatch
+name: ForgeFlow Foundry Dispatch
 on:
   workflow_dispatch:
     inputs:
@@ -11,7 +11,7 @@ permissions:
   contents: read
   issues: write
 concurrency:
-  group: system-a-dispatch
+  group: foundry-dispatch
   cancel-in-progress: false
 jobs:
   dispatch:
@@ -19,7 +19,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
-      SYSTEM_A_ENABLED: ${{ vars.SYSTEM_A_ENABLED }}
+      FOUNDRY_ENABLED: ${{ vars.FOUNDRY_ENABLED }}
       GITHUB_REPOSITORY: ${{ github.repository }}
       DRY_RUN: ${{ inputs.dry_run }}
     steps:
@@ -28,4 +28,4 @@ jobs:
         with:
           python-version: '3.11'
       - name: Dispatch one task
-        run: python -m system_a.dispatcher
+        run: python -m foundry.dispatcher

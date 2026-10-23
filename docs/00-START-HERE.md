@@ -12,7 +12,7 @@
 3. In Cursor dashboard, connect source control, choose repo, configure environment, run initial Build.
 4. Verify `AGENTS.md` and tests are accessible in the Cloud Agent VM.
 5. Create labels: `agent-approved`, `agent-running`, `agent-blocked`, `agent-done`.
-6. Add GitHub repository variable `SYSTEM_A_ENABLED=false` and secret `CURSOR_API_KEY`.
+6. Add GitHub repository variable `FOUNDRY_ENABLED=false` and secret `CURSOR_API_KEY`.
 7. Run dispatcher workflow manually in dry-run; ensure only approved issues are selected.
 8. Set variable true; manually launch a trivial issue. Verify agent URL, PR, CI, human review.
 9. Test failure and duplicate-dispatch scenarios before enabling scheduled execution.
